@@ -34,11 +34,16 @@ public class ClassifierQuantizedMobileNet extends Classifier {
     super(activity, device, numThreads);
   }
 
+//  @Override
+//  protected String getModelPath() {
+//    // you can download this file from
+//    // see build.gradle for where to obtain this file. It should be auto
+//    // downloaded into assets.
+//    return "mobilenet_v1_1.0_224_quant.tflite";
+//  }
+
   @Override
   protected String getModelPath() {
-    // you can download this file from
-    // see build.gradle for where to obtain this file. It should be auto
-    // downloaded into assets.
-    return "mobilenet_v1_1.0_224_quant.tflite";
+    return "converted_tflite_quantized/model.tflite";
   }
 }
